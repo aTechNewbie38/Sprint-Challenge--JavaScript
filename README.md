@@ -30,13 +30,34 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+forEach() - executes a provided function once for each array element.
+forEach() method doesn't actually return anything (undefined). It simply calls a provided function on each element in your array. This callback is allowed to mutate the calling array.
+
+map() - creates a new array with the results of calling a provided function on every element in the calling array.
+The map() method will also call a provided function on every element in the array. The difference is that map() utilizes return values and actually returns a new Array of the same size.
+
+.forEach is one of the most powerful functions we have. It does one thing really really well, iterate over a list of data and in turn pass back an item and index to use for use. We technically could do whatever we want with that data keeping in mind that .forEach doesn't return us anything like .map does. 
+
 2. What is the difference between a function and a method?
+
+A function returns a value, but a procedure does not. A method is similar to a function, but is internal to part of a class. The term method is used almost exclusively in object-oriented programming. A function is something that takes a bunch of inputs and returns one or more values. 
 
 3. What is closure?
 
+Closure is the combination of a function, and the lexical environment within which that function was declared. 
+
 4. Describe the four rules of the 'this' keyword.
 
+The four rules of the 'this' keyword is:
+1. Implicit Binding - look to the left of the dot at call time.
+2. Explicit Binding - telling a function what the context of the 'this' keyword is going to be using call, apply or bind.
+3. new Binding - Whenever you have a function invoiked with a new key, the 'this' keyword is bound to the object being constructed.
+4. window Binding - If none of these rules apply, then the 'this' keyword is goig to default to the window object unless you are in strict mode, then it's just going to be undefined. 
+
 5. Why do we need super() in an extended class?
+
+The extends keyword will abstract away any of the Class.call syntax. super() is used to tell a parent's obstructor to be concerned with the child's attributes and vice versa and abstracts away Object.create(this,Class)syntax.
+
 
 ## Project Set up
 
